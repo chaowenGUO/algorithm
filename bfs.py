@@ -19,3 +19,14 @@ def bfs(root):
         seen |= graph.get(node)
         result += node,
     return result
+
+def dfs(root):
+    result = []
+    stack = [root]
+    seen = {root}
+    while stack:
+        node = stack.pop()
+        stack += graph.get(node) - seen
+        seen |= graph.get(node)
+        result += node,
+    return result
