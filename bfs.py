@@ -10,4 +10,10 @@ graph = {
 import collections
 
 def bfs(root):
-    
+    queue = collections.deque(root)
+    seen = set()
+    while queue:
+        node = queue.pop()
+        queue += graph.get(node) - seen
+        seen | graph.get(node)
+        print(node)
