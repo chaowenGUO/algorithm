@@ -6,3 +6,6 @@ graph = {
   'E': {*'CD'},
   'F': {'D'}
 }
+
+def bfs(root):
+  
