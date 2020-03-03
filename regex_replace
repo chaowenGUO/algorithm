@@ -1,0 +1,7 @@
+#include<boost/regex.hpp>
+
+int main()
+{
+    using namespace std::literals;
+    std::cout << boost::regex_replace("aabbbcccc"s, boost::regex{"a"}, [](auto const&group){return group.str() + "d";}) << std::endl;
+}
